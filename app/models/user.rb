@@ -8,6 +8,10 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :validatable
   include DeviseTokenAuth::Concerns::User
 
+  has_many :submissions
+
+  # validates 
+
   enum role: {
     "student": 0,
     "teacher":1
